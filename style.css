@@ -1,0 +1,111 @@
+@font-face {
+    font-family: mukta;
+    src: url(Fonts/Mukta/Mukta-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: mukta, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5ebe0;
+}
+
+.header {
+    height: 7.5vh;
+    background-color: #d5bdaf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 48px;
+    color: #4a4e69;
+}
+
+div p {
+    height: auto;
+    max-width: 500px;
+    font-size: 24px;
+    color: #4a4e69;
+    font-weight: 600;
+}
+
+.first-paragraph {
+    height: 92.5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.first-paragraph img {
+    width: auto;
+    height: 500px;
+    border-radius: 5em;
+    border: 5px solid #d5bdaf;
+}
+
+.second-paragraph {
+    background-color: #4a4e69;
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.second-paragraph p {
+    color: #f5ebe0;
+}
+
+.second-paragraph img {
+    height: auto;
+    width: 500px;
+    border-radius: 5em;
+    border: 5px solid #d5bdaf;
+}
+
+.third-paragraph {
+    height: 92.5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.third-paragraph img {
+    width: auto;
+    height: 500px;
+    border-radius: 5em;
+    border: 5px solid #d5bdaf;
+}
+
+.footer {
+    width: 100%;
+    height: 7.5vh;
+    background-color: #d5bdaf;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer .footer-heading {
+    font-size: 28px;
+    color: #4a4e69;
+}
+
+/* .footer button {
+    background-color: #4a4e69;
+    color: #f5ebe0;
+    border: 2px solid #4a4e69;
+    border-radius: 2em;
+    width: fit-content;
+    height: 25px;
+    cursor: pointer;
+} */

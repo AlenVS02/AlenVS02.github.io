@@ -4,8 +4,8 @@
 }
 
 @font-face {
-    font-family: pacifico;
-    src: url(Fonts/Pacifico/Pacifico-Regular.ttf);
+    font-family: anton;
+    src: url(Fonts/Anton/Anton-Regular.ttf);
 }
 
 * {
@@ -16,26 +16,76 @@
 }
 
 body {
-    background-color: #29084b;
-    display: flex;
+    background-color: #fff8fb;
+    width: 100%;
 }
 
 header {
-    color: #FF0032;
-    width: 1;
-    padding-left: 25px;
-    padding-top: 5px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    color: #fcdce9;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+.div-header {
+    padding-left: 15px;
 }
 
 header .title-header {
-    font-family: pacifico, sans-serif;
+    font-family: anton, sans-serif;
     font-size: 48px;
 }
 
+.div-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+}
+
 .form {
-    justify-self: center;
-    align-self: center;
+    border-radius: 2em;
+    background-color: #fcdce9;
+    color: rgb(83, 83, 83);
+    height: 550px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-header {
+    font-size: 36px;
+}
+
+.div-username, .div-password {
+    font-size: 24px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+input {
+    border-style: none;
+    border-radius: 10px;
+    width: 75%;
+    height: 2rem;
+    padding-left: 10px;
+}
+
+button {
+    background-color: white;
+    color: rgb(83, 83, 83);
+    font-size: 24px;
+    border-style: none;
+    border-radius: 10px;
+    width: 50%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }

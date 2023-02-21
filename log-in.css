@@ -23,11 +23,8 @@ body {
 header {
     color: #fcdce9;
     text-shadow: 1px 1px 1px black;
-}
-
-
-.div-header {
-    padding-left: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 header .title-header {
@@ -71,7 +68,7 @@ header .title-header {
 input {
     border-style: none;
     border-radius: 10px;
-    width: 75%;
+    width: 85%;
     height: 2rem;
     padding-left: 10px;
 }

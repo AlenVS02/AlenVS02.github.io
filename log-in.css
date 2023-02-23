@@ -73,6 +73,25 @@ input {
     padding-left: 10px;
 }
 
+.div-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(167, 167, 167);
+    gap: 0.5em;
+}
+
+.div-checkbox #checkbox {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
 button {
     background-color: white;
     color: rgb(83, 83, 83);
@@ -90,4 +109,8 @@ button {
 
 button:hover {
     box-shadow: 1px 1px 6px#ff308d;
+}
+
+a {
+    text-decoration: none;
 }

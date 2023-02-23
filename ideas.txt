@@ -1,0 +1,7 @@
+- Map with countries/cities visited - highlights countries
+- Bucket list with categorical buckets
+- Date planner
+- Calendar
+- Gallery of our pictures
+- Maybe places we've been to (Fav restaurants)
+- To-watch movies

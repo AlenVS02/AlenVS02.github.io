@@ -21,7 +21,11 @@ body {
 
 .header {
     border-bottom: 2px solid ;
-    color: #fcdce9;
+    color: #ff3384;
+}
+
+.header li {
+    display: inline-block;
 }
 
 .header-title {

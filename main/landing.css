@@ -1,0 +1,29 @@
+@font-face {
+    font-family: mukta;
+    src: url(Fonts/Mukta/Mukta-Regular.ttf);
+}
+
+@font-face {
+    font-family: anton;
+    src: url(Fonts/Anton/Anton-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: mukta, Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+
+.header {
+    border-bottom: 2px solid ;
+    color: #fcdce9;
+}
+
+.header-title {
+
+}

@@ -22,7 +22,6 @@ body {
 
 header {
     color: #fcdce9;
-    text-shadow: 1px 1px 1px black;
     display: flex;
     justify-content: center;
 }
@@ -30,6 +29,7 @@ header {
 header .title-header {
     font-family: anton, sans-serif;
     font-size: 48px;
+    text-shadow: 1px 1px 1px black;
 }
 
 .div-form {

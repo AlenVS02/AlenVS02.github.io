@@ -46,19 +46,25 @@ body {
     text-decoration: none;
     font-size: inherit;
     font-family: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
     margin: 0;
-    cursor: pointer;
     width: 150px;
+    cursor: pointer;
     border-radius: 25px;
-    box-shadow: 0px 0px 0px 5px #fcdce9;
-    transition: box-shadow 0.5s linear;
+    transition: box-shadow 0.25s ease-in-out, background-color 0.25s ease-in-out;
 }
 
-.dropdown > .link:focus {
-    box-shadow: 0px, 0px, 0px, 5px #fcdce9;
+.link:hover {
+    box-shadow: 0px 0px 0px 3px #fcdce9;
 }
 
+.link:focus {
+    background-color: #fcdce9;
+    box-shadow: 0px 0px 0px 3px #fcdce9;
+ }
 .dropdown {
     position: relative;
 }
@@ -66,6 +72,7 @@ body {
 .dropdown-menu {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     position: absolute;
     left: 0;
     width: 250px;
@@ -83,7 +90,12 @@ body {
 .dropdown > .link:focus + .dropdown-menu {
     opacity: 1;
     transform: translateY(0);
-    pointer-events: auto;
+    pointer-events: active;
+}
+
+.dropdown .dropdown-menu .link {
+    display: flex;
+    justify-content: flex;
 }
 
 
@@ -112,13 +124,29 @@ a:hover, button:hover, button:focus {
     color: #000;
 }
 
-.header > #drop-down-icon {
+.header > #nav-bar-icon {
     height: 30px;
     width: auto;
-    transform: rotate(90deg);
+    pointer-events: visible;
+    cursor: pointer;
+    transform: rotate(-90deg);
     transition: transform .5s ease-in-out;
+    border-radius: 100%;
 }
 
-#drop-down-icon:focus {
-    transform: rotate(-90deg);
+#nav-bar-icon:hover {
+    transform: rotate(90deg);
+    background-color: #fcdce9;
+}
+
+@media (max-width: 800px) {
+    .link {
+        display: none;
+    }
+
+    .header {
+        position: relative;
+        padding: 0 10px 0 10px ;
+        gap: 1em;
+    }
 }

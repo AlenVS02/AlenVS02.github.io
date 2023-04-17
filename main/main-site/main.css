@@ -20,11 +20,16 @@ body {
 }
 
 .header {
+    width: 100%;
+    height: 2.5%;
+    position: relative;
     border-bottom: 3px solid #fcdce9;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    gap: 5px;
     font-size: 24px;
+    white-space: nowrap;
 }
 
 .header > .link {
@@ -40,7 +45,7 @@ body {
     padding: 0;
 }
 
-.link {
+.header-link {
     background: none;
     border: none;
     text-decoration: none;
@@ -49,19 +54,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    padding: 0px .5em;
     margin: 0;
-    width: 150px;
+    width: fit-content;
     cursor: pointer;
     border-radius: 25px;
     transition: box-shadow 0.25s ease-in-out, background-color 0.25s ease-in-out;
 }
 
-.link:hover {
+.header-link:hover {
     box-shadow: 0px 0px 0px 3px #fcdce9;
 }
 
-.link:focus {
+.header-link:focus {
     background-color: #fcdce9;
     box-shadow: 0px 0px 0px 3px #fcdce9;
  }
@@ -69,10 +74,7 @@ body {
     position: relative;
 }
 
-.dropdown-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.dropdown-menu{
     position: absolute;
     left: 0;
     width: 250px;
@@ -82,22 +84,20 @@ body {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, .2);
     padding: 10px;
     opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
+    /* pointer-events: none; */
     transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
 }
 
-.dropdown > .link:focus + .dropdown-menu {
+.dropdown-menu .dropdown-menu-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown > .header-link:focus + .dropdown-menu {
     opacity: 1;
     transform: translateY(0);
-    pointer-events: active;
+    pointer-events: auto;
 }
-
-.dropdown .dropdown-menu .link {
-    display: flex;
-    justify-content: flex;
-}
-
 
 li {
     list-style: none;
@@ -124,29 +124,28 @@ a:hover, button:hover, button:focus {
     color: #000;
 }
 
-.header > #nav-bar-icon {
+.nav-bar-icon {
     height: 30px;
-    width: auto;
-    pointer-events: visible;
+    width: fit-content;
     cursor: pointer;
-    transform: rotate(-90deg);
+    transform: rotate(-45deg);
     transition: transform .5s ease-in-out;
+    border: none;
+    background: none;
+    padding: 0;
     border-radius: 100%;
 }
 
-#nav-bar-icon:hover {
-    transform: rotate(90deg);
+.nav-bar-icon:focus {
+    transform: rotate(135deg);
     background-color: #fcdce9;
+    pointer-events: active;
+
 }
 
 @media (max-width: 800px) {
-    .link {
+    .header-link {
         display: none;
     }
 
-    .header {
-        position: relative;
-        padding: 0 10px 0 10px ;
-        gap: 1em;
-    }
 }

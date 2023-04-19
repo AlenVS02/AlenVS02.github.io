@@ -1,5 +1,6 @@
-const navBarIcon = document.querySelector('#nav-bar-icon');
-
-navBarIcon.addEventListener("click", () => {
-    navBarIcon.style.transform = 'rotate(90deg);'
-})
+// var dropdownLinks = document.querySelectorAll(".dropdown-menu a")
+// dropdownLinks.forEach(function(link) {
+//     link.addEventListener('click', function(event) {
+//         event.preventDefault()
+//     })
+// })

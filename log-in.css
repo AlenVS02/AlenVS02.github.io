@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: mukta;
     src: url(Fonts/Mukta/Mukta-Regular.ttf);
@@ -57,6 +58,7 @@ header .title-header {
 }
 
 .div-username, .div-password {
+    position: relative;
     font-size: 24px;
     width: 100%;
     height: auto;
@@ -65,12 +67,28 @@ header .title-header {
     justify-content: center;
 }
 
+.input-container {
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 input {
+    outline: none;
     border-style: none;
     border-radius: 10px;
     width: 85%;
     height: 2rem;
     padding-left: 10px;
+    transition: 250ms ease-in-out;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+input:focus {
+    box-shadow: 1px 1px 6px#ff308d;
 }
 
 .div-checkbox {
@@ -113,4 +131,39 @@ button:hover {
 
 a {
     text-decoration: none;
+}
+.checkmark, .wrong-cross {
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    width: 25px;
+    height: 25px;
+}
+
+#checkmark-username {
+    opacity: 0;
+}
+#wrong-cross-username {
+    opacity: 0;
+}
+#checkmark-password {
+    opacity: 0;
+}
+#wrong-cross-password {
+    opacity: 0;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: block;
+
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
 }

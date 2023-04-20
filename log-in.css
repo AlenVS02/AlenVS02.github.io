@@ -25,6 +25,7 @@ header {
     color: #fcdce9;
     display: flex;
     justify-content: center;
+    padding: 1em;
 }
 
 header .title-header {
@@ -37,7 +38,7 @@ header .title-header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0px;
+    padding: 2em;
 }
 
 .form {
@@ -166,4 +167,8 @@ a {
     50% { transform: rotate(0eg); }
     75% { transform: rotate(-5deg); }
     100% { transform: rotate(0deg); }
+}
+
+@media (max-width: 650px) {
+
 }

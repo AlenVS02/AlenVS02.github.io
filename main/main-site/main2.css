@@ -1,0 +1,162 @@
+.sticky-board-header {
+    position: relative;
+    background-color: #fcdce9;
+    color: #000;
+    font-size: 38px;
+    font-weight: 1000;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px 5px 0em 5px;
+    transform: translateY(.4em);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-top:  15px double #fff8fb;
+    border-left: 15px double #fff8fb;
+    border-right: 15px double #fff8fb;
+    z-index: 1;
+}
+
+.sticky-board-wrapper::before {
+    display: none;
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 45%;
+    align-self: flex-end;
+    width: 23.75%;
+    background-color: #000;
+    height: 25px;
+    /* z-index: 10; */
+}
+
+.sticky-board-wrapper {
+    position: relative;
+    width: 100%;
+    height: 75%;
+    background-color: #fcdce9;
+    padding: 2em;
+    border-radius: 1em;
+    border-top-left-radius: 0;
+    display: flex;
+    gap: 2em;
+    border: 15px double #fff8fb;
+    z-index: 0;
+}
+
+.tools {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1em;
+    z-index: 10;
+}
+
+.tool-button {
+    position: relative;
+    width: 60px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: .25s transform ease-in-out;
+
+}
+
+.tool-button:hover {
+    transform: scale(1.1);
+}
+
+.sticky-note::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 55px;
+    background-color: transparent;
+    width: 20px;
+    height: 30px;
+    border-top-left-radius: 50%;
+    box-shadow: 0 -1em 0 0 #fff8fb;
+}
+
+.sticky-note::after {
+    content: "Create a sticky note";
+    display: flex;
+    align-items: center;
+    text-align: left;
+    position: absolute;
+    top: -55px;
+    left: 55px;
+    width: 100px;
+    height: 50px;
+    border-radius: 1em;
+    border-bottom-left-radius: 0;
+    background-color: #fff8fb;
+    padding-left: 15px;
+    pointer-events: none;
+}
+
+.camera::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 55px;
+    background-color: transparent;
+    width: 20px;
+    height: 30px;
+    border-top-left-radius: 50%;
+    box-shadow: 0 -1em 0 0 #fff8fb;
+}
+
+.camera::after {
+    content: "Add a picture";
+    display: flex;
+    align-items: center;
+    text-align: left;
+    position: absolute;
+    top: -55px;
+    left: 55px;
+    width: 100px;
+    height: 50px;
+    border-radius: 1em;
+    border-bottom-left-radius: 0;
+    background-color: #fff8fb;
+    padding-left: 15px;
+    pointer-events: none;
+}
+
+.brushstroke::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 55px;
+    background-color: transparent;
+    width: 20px;
+    height: 30px;
+    border-top-left-radius: 50%;
+    box-shadow: 0 -1em 0 0 #fff8fb;
+}
+
+.brushstroke::after {
+    content: "Draw something";
+    display: flex;
+    align-items: center;
+    text-align: left;
+    position: absolute;
+    top: -55px;
+    left: 55px;
+    width: 100px;
+    height: 50px;
+    border-radius: 1em;
+    border-bottom-left-radius: 0;
+    background-color: #fff8fb;
+    padding-left: 15px;
+    pointer-events: none;
+}
+
+.stickyboard {
+    border-left: 5px solid #000;
+    width: 100%
+}

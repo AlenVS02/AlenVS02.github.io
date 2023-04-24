@@ -69,7 +69,7 @@
     transform: scale(1.1);
 }
 
-.sticky-note::before {
+.sticky-note::before, .camera::before, .brushstroke::before {
     content: "";
     position: absolute;
     top: -5px;
@@ -79,81 +79,40 @@
     height: 30px;
     border-top-left-radius: 50%;
     box-shadow: 0 -1em 0 0 #fff8fb;
+    opacity: 0;
+}
+
+.sticky-note::after, .camera::after, .brushstroke::after {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    position: absolute;
+    top: -55px;
+    left: 55px;
+    width: 100px;
+    height: 50px;
+    border-radius: 1em;
+    border-bottom-left-radius: 0;
+    background-color: #fff8fb;
+    padding-left: 15px;
+    pointer-events: none;
+    opacity: 0;
 }
 
 .sticky-note::after {
     content: "Create a sticky note";
-    display: flex;
-    align-items: center;
-    text-align: left;
-    position: absolute;
-    top: -55px;
-    left: 55px;
-    width: 100px;
-    height: 50px;
-    border-radius: 1em;
-    border-bottom-left-radius: 0;
-    background-color: #fff8fb;
-    padding-left: 15px;
-    pointer-events: none;
-}
-
-.camera::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: 55px;
-    background-color: transparent;
-    width: 20px;
-    height: 30px;
-    border-top-left-radius: 50%;
-    box-shadow: 0 -1em 0 0 #fff8fb;
 }
 
 .camera::after {
     content: "Add a picture";
-    display: flex;
-    align-items: center;
-    text-align: left;
-    position: absolute;
-    top: -55px;
-    left: 55px;
-    width: 100px;
-    height: 50px;
-    border-radius: 1em;
-    border-bottom-left-radius: 0;
-    background-color: #fff8fb;
-    padding-left: 15px;
-    pointer-events: none;
-}
-
-.brushstroke::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: 55px;
-    background-color: transparent;
-    width: 20px;
-    height: 30px;
-    border-top-left-radius: 50%;
-    box-shadow: 0 -1em 0 0 #fff8fb;
 }
 
 .brushstroke::after {
     content: "Draw something";
-    display: flex;
-    align-items: center;
-    text-align: left;
-    position: absolute;
-    top: -55px;
-    left: 55px;
-    width: 100px;
-    height: 50px;
-    border-radius: 1em;
-    border-bottom-left-radius: 0;
-    background-color: #fff8fb;
-    padding-left: 15px;
-    pointer-events: none;
+}
+
+.tool-button:hover  .sticky-note::before, .camera::before, .brushstroke::before, .sticky-note::after, .camera::after, .brushstroke::after {
+    opacity: 1;
 }
 
 .stickyboard {

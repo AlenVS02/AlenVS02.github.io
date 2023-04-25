@@ -7,6 +7,7 @@
     <title> Your Daily Valentine's </title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="main2.css">
+    <link rel="stylesheet" href="popup.css">
     <script src="main.js" defer></script>
 </head>
 <body>
@@ -31,15 +32,51 @@
         <h3 class="sticky-board-header">Sticky Board</h3>
         <div class="sticky-board-wrapper">
             <div class="tools">
-                <button class="tool-button sticky-note">
+                <button data-popup-target="#popup" class="tool-button sticky-note open-popup">
                     <img src="./icons/plus-square-svgrepo-com.svg">
                 </button>
-                <button class="tool-button camera">
+                <div class="popup" id="popup">
+                    <header class="popup-header" >
+                        <div class="title"> Insert Text </div>
+                        <button data-close-button class="close-popup"> &times; </button>
+                    </header>
+                    <div class="popup-body">
+                        <textarea name="post-it" id="post-it" cols="30" rows="10" class="post-it"></textarea>
+                    </div>
+                    <footer class="popup-footer">
+                        <button class="create-button"> Create </button>
+                    </footer>
+                </div>
+                <button data-popup-target="#popup" class="tool-button open-popup camera">
                     <img src="./icons/camera-svgrepo-com.svg">
                 </button>
-                <button class="tool-button brushstroke">
+                <div class="popup" id="popup">
+                    <header class="popup-header" >
+                        <div class="title"> Insert Text </div>
+                        <button data-close-button class="close-popup"> &times; </button>
+                    </header>
+                    <div class="popup-body">
+                        <textarea name="post-it" id="post-it" cols="30" rows="10" class="post-it"></textarea>
+                    </div>
+                    <footer class="popup-footer">
+                        <button class="create-button"> Create </button>
+                    </footer>
+                </div>
+                <button data-popup-target="#popup" class="tool-button open-popup brushstroke">
                     <img src="./icons/easel-svgrepo-com.svg">
                 </button>
+                <div class="popup" id="popup">
+                    <header class="popup-header" >
+                        <div class="title"> Insert Text </div>
+                        <button data-close-button class="close-popup"> &times; </button>
+                    </header>
+                    <div class="popup-body">
+                        <textarea name="post-it" id="post-it" cols="30" rows="10" class="post-it"></textarea>
+                    </div>
+                    <footer class="popup-footer">
+                        <button class="create-button"> Create </button>
+                    </footer>
+                </div>
             </div>
             <div class="stickyboard">
 

@@ -28,6 +28,7 @@
             <img src="./icons/chevron.png" alt="Nav bar menu icon" class="nav-bar-icon">
         </button>
     </header>
+
     <div class="hero">
         <h3 class="sticky-board-header">Sticky Board</h3>
         <div class="sticky-board-wrapper">
@@ -41,12 +42,13 @@
                         <button data-close-button class="close-popup"> &times; </button>
                     </header>
                     <div class="popup-body">
-                        <textarea name="post-it" id="post-it" cols="30" rows="10" class="post-it"></textarea>
+                        <input name="post-it" id="post-it" cols="30" rows="10" class="post-it" type="text"></input>
                     </div>
                     <footer class="popup-footer">
                         <button class="create-button"> Create </button>
                     </footer>
                 </div>
+
                 <button data-popup-target="#popup" class="tool-button open-popup camera">
                     <img src="./icons/camera-svgrepo-com.svg">
                 </button>
@@ -56,12 +58,13 @@
                         <button data-close-button class="close-popup"> &times; </button>
                     </header>
                     <div class="popup-body">
-                        <textarea name="post-it" id="post-it" cols="30" rows="10" class="post-it"></textarea>
+                        <input name="post-it" id="post-it" cols="30" rows="10" class="post-it" type="file" accept="image"></input>
                     </div>
                     <footer class="popup-footer">
                         <button class="create-button"> Create </button>
                     </footer>
                 </div>
+
                 <button data-popup-target="#popup" class="tool-button open-popup brushstroke">
                     <img src="./icons/easel-svgrepo-com.svg">
                 </button>
@@ -71,16 +74,16 @@
                         <button data-close-button class="close-popup"> &times; </button>
                     </header>
                     <div class="popup-body">
-                        <textarea name="post-it" id="post-it" cols="30" rows="10" class="post-it"></textarea>
+                        <input name="post-it" id="post-it" cols="30" rows="10" class="post-it" type="text"></input>
                     </div>
                     <footer class="popup-footer">
                         <button class="create-button"> Create </button>
                     </footer>
                 </div>
+
                 <div id="overlay"></div>
             </div>
             <div class="stickyboard">
-
             </div>
 
         </div>

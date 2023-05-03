@@ -1,5 +1,5 @@
 .sticky-board-header {
-    position: relative;
+    /* position: relative; */
     background-color: #fcdce9;
     color: #000;
     font-size: 38px;
@@ -29,11 +29,10 @@
     width: 23.75%;
     background-color: #000;
     height: 25px;
-    /* z-index: 10; */
+    z-index: 5;
 }
 
 .sticky-board-wrapper {
-    position: relative;
     width: 100%;
     height: 75%;
     background-color: #fcdce9;
@@ -43,7 +42,6 @@
     display: flex;
     gap: 2em;
     border: 15px double #fff8fb;
-    z-index: 0;
 }
 
 .tools {
@@ -53,6 +51,7 @@
     justify-content: space-evenly;
     gap: 1em;
     z-index: 10;
+    padding: 1em 0;
 }
 
 .tool-button {
@@ -62,14 +61,13 @@
     border: none;
     cursor: pointer;
     transition: .25s transform ease-in-out;
-
 }
 
 .tool-button:hover {
     transform: scale(1.1);
 }
 
-.sticky-note::before, .camera::before, .brushstroke::before {
+/* .sticky-note::before, .camera::before, .brushstroke::before {
     content: "";
     position: absolute;
     top: -5px;
@@ -79,8 +77,7 @@
     height: 30px;
     border-top-left-radius: 50%;
     box-shadow: 0 -1em 0 0 #fff8fb;
-    opacity: 0;
-}
+} */
 
 .sticky-note::after, .camera::after, .brushstroke::after {
     display: flex;
@@ -97,6 +94,7 @@
     padding-left: 15px;
     pointer-events: none;
     opacity: 0;
+    transition: .5s ease-in-out;
 }
 
 .sticky-note::after {
@@ -111,7 +109,7 @@
     content: "Draw something";
 }
 
-.tool-button:hover  .sticky-note::before, .camera::before, .brushstroke::before, .sticky-note::after, .camera::after, .brushstroke::after {
+.tool-button:hover.sticky-note::after, .tool-button:hover.camera::after, .tool-button:hover.brushstroke::after {
     opacity: 1;
 }
 

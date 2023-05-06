@@ -50,7 +50,7 @@ function closePopup(popup) {
 // This block of code is for the daily song feature
 const showSongButton = document.querySelector('[data-song-target]')
 const closeSongButton = document.querySelector('[data-close-song]')
-
+const songElement = document.getElementById('song')
 
 showSongButton.addEventListener('click', () => {
     const song = document.querySelector(showSongButton.dataset.songTarget)

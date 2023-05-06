@@ -160,6 +160,7 @@
     pointer-events: none;
     opacity: 0;
     transition: .5s ease-in-out;
+    border: 2px solid rgb(0, 0, 0, 0.1);
 }
 
 .sticky-note::after {
@@ -180,6 +181,23 @@
 
 .stickyboard {
     width: 100%;
-    margin-left: 15px;
     background-color: #fff8fb;
+    border-radius: 1em;
+    display: grid;
+}
+
+
+.stickyboard > .post-it {
+    font-size: x-small;
+    font-weight: 500;
+    max-width: 12.5em;
+    width: 50%;
+    height: fit-content;
+    max-height: 17.5em;
+    background-color: #d8ebff;
+    padding: 1em;
+    word-break: break-all;
+    transform: scale(1);
+    opacity: 1;
+
 }

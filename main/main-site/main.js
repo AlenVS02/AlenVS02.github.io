@@ -47,6 +47,31 @@ function closePopup(popup) {
     overlay.classList.remove('active')
 }
 
+// This block of code creates divs that serve as post-its
+const stickyBoard = document.querySelector('.stickyboard')
+const createNoteButton = document.querySelector('.create-button')
+
+function getColor(){
+    return "hsl(" + 360 * Math.random() + ',' +
+               (25 + 70 * Math.random()) + '%,' +
+               (85 + 10 * Math.random()) + '%)'
+}
+
+createNoteButton.addEventListener('click', () => {
+    const inputText = document.querySelector('.post-it').value
+    const postIt = document.createElement('div')
+
+    postIt.textContent = inputText
+    postIt.classList.add('post-it')
+    postIt.style.backgroundColor = getColor()
+
+    stickyBoard.appendChild(postIt)
+    document.querySelector('.post-it').value = null
+})
+
+// This block of code adds draggable functionality to the post-its
+
+
 // This block of code is for the daily song feature
 const showSongButton = document.querySelector('[data-song-target]')
 const closeSongButton = document.querySelector('[data-close-song]')

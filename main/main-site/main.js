@@ -47,3 +47,17 @@ function closePopup(popup) {
     popup.classList.remove('active')
     overlay.classList.remove('active')
 }
+// This is the end of the popup block of code
+
+// This block of code is for the daily song feature
+const showSongButton = document.querySelector('[data-song-target]')
+
+showSongButton.addEventListener('click', () => {
+    const song = document.querySelector(showSongButton.dataset.songTarget)
+    showSong(song)
+})
+
+function showSong(song) {
+    if (song == null) return
+    song.classList.add('active')
+}

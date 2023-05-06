@@ -32,13 +32,16 @@
     <div class="hero">
         <div class="sticky-board-header">
             <h3 >Sticky Board</h3>
+            <button data-song-target="#song" class="song-button">
+                <img src="./icons/music-note-svgrepo-com.svg">
+            </button>
             <div class="song-container">
-                <button data-song-target="#song" class="tool-button song-button">
-                    <img src="./icons/music-note-svgrepo-com.svg">
+                <button data-close-song class="tool-button close-song">
+                    <img src="./icons/close-svgrepo-com.svg" alt="close song button">
                 </button>
                 <iframe
                     id="song"
-                    class="daily-song"
+                    class="daily-song song"
                     style="border-radius:12px; margin: 15px;"
                     src="https://open.spotify.com/embed/track/269gHSDdfCQBLV1ylElDCb?utm_source=generator"
                     frameBorder="0"
@@ -46,7 +49,9 @@
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
                 </iframe>
             </div>
+
         </div>
+
         <div class="sticky-board-wrapper">
             <div class="tools">
                 <button data-popup-target="#popup" class="tool-button sticky-note open-popup">

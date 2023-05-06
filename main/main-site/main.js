@@ -15,7 +15,6 @@ document.addEventListener('click', e => {
         dropdown.classList.remove('active')
     })
 })
-// This is the end of the dropdown menu block of code
 
 // This block of code is for the modals
 const openPopupButtons = document.querySelectorAll('[data-popup-target]');
@@ -47,17 +46,32 @@ function closePopup(popup) {
     popup.classList.remove('active')
     overlay.classList.remove('active')
 }
-// This is the end of the popup block of code
 
 // This block of code is for the daily song feature
 const showSongButton = document.querySelector('[data-song-target]')
+const closeSongButton = document.querySelector('[data-close-song]')
+
 
 showSongButton.addEventListener('click', () => {
     const song = document.querySelector(showSongButton.dataset.songTarget)
     showSong(song)
 })
 
+closeSongButton.addEventListener('click', () => {
+    const song = closeSongButton.nextElementSibling
+    closeSong(song)
+})
+
 function showSong(song) {
     if (song == null) return
     song.classList.add('active')
+    showSongButton.classList.add('active')
+    closeSongButton.classList.add('active')
+}
+
+function closeSong(song) {
+    if (song == null) return
+    song.classList.remove('active')
+    showSongButton.classList.remove('active')
+    closeSongButton.classList.remove('active')
 }

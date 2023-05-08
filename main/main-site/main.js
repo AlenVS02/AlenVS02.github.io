@@ -57,12 +57,16 @@ function getColor(){
                (85 + 10 * Math.random()) + '%)'
 }
 
+let idNumber = 0
+
 createNoteButton.addEventListener('click', () => {
     const inputText = document.querySelector('.post-it').value
     const postIt = document.createElement('div')
+    idNumber++
 
     postIt.textContent = inputText
-    postIt.classList.add('post-it')
+    postIt.classList.add('post-it-note')
+    postIt.id = `post-it-note${idNumber}`
     postIt.style.backgroundColor = getColor()
 
     stickyBoard.appendChild(postIt)
@@ -70,6 +74,30 @@ createNoteButton.addEventListener('click', () => {
 })
 
 // This block of code adds draggable functionality to the post-its
+
+let drag;
+const numberRegEx = /[1-9]|[1-9]|[0-9]|100/;
+
+function dragMove(id) {
+    var element = document.getElementById(`post-it-note${numberRegEx}`);
+    element.style.position = 'absolute';
+    element.onmousedown = function(){
+        drag = element;
+    }
+}
+
+document.onmouseup = function(e) {
+    drag = null;
+}
+document.onmousemove = function(e) {
+    console.log(drag.id)
+    var x = e.pageX
+    var y = e.pageY
+    console.log(type(x), type(y))
+    drag.style.left = x + 'px';
+    drag.style.top = y + 'px'
+}
+
 
 
 // This block of code is for the daily song feature

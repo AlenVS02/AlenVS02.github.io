@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="main2.css">
     <link rel="stylesheet" href="popup.css">
-    <script src="main.js" defer></script>
+    <script src="main.js" defer>
+        const numberRegEx = /[1-9]|[1-9]|[0-9]|100/;
+    </script>
 </head>
-<body>
+<body onload="dragMove('post-it-note${numberRegEx}')">
     <header class="header">
         <h1 class="header-title"> Your Daily Valentine's</h1>
         <div class="dropdown" data-dropdown>
@@ -63,7 +65,7 @@
                         <button data-close-button class="close-popup"> &times; </button>
                     </header>
                     <div class="popup-body">
-                        <textarea name="post-it" id="post-it" cols="30" rows="10" class="post-it" type="text"></textarea>
+                        <input name="post-it" id="post-it" cols="30" rows="10" class="post-it" type="text"></input>
                     </div>
                     <footer class="popup-footer">
                         <button data-close-button class="create-button"> Create </button>
@@ -104,7 +106,7 @@
 
                 <div id="overlay"></div>
             </div>
-            <div class="stickyboard-container">
+            <div class="stickyboard">
             </div>
 
         </div>

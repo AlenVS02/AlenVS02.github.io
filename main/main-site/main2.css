@@ -183,11 +183,13 @@
     width: 100%;
     background-color: #fff8fb;
     border-radius: 1em;
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.stickyboard > .post-it {
+.stickyboard > .post-it-note {
     font-size: x-small;
     font-weight: 500;
     max-width: 12.5em;
@@ -199,5 +201,6 @@
     word-break: break-all;
     transform: scale(1);
     opacity: 1;
-
+    flex-wrap: wrap;
+    cursor: move;
 }

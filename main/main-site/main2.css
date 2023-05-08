@@ -1,25 +1,89 @@
 .sticky-board-header {
-    /* position: relative; */
+    position: relative;
     background-color: #fcdce9;
     color: #000;
     font-size: 38px;
     font-weight: 1000;
-    width: 50%;
-    text-align: center;
+    width: 100%;
+    text-align: left;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
-    padding: 5px 5px 0em 5px;
+    padding: 15px 5% 0em 5%;
     transform: translateY(.4em);
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
     border-top:  15px double #fff8fb;
     border-left: 15px double #fff8fb;
     border-right: 15px double #fff8fb;
-    z-index: 1;
+    z-index: 0;
 }
 
-.sticky-board-wrapper::before {
+.song-button {
+    position: relative;
+    width: 60px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: .5s ease-in-out;
+    transform: scale(1);
+}
+
+.song-button:hover {
+    transform: scale(1.1);
+}
+
+.song-button.active {
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.song-container {
+    position: absolute;
+    top: 0;
+    right: 75px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.daily-song {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 350px;
+    transform: translateX(20px);
+    opacity: 0;
+    transition: .5s ease-in-out;
+    pointer-events: none;
+}
+
+.daily-song.active{
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.song-container > .close-song {
+    width: 30px;
+    position: absolute;
+    top: 17.5%;
+    opacity: 0;
+    pointer-events: none;
+    /* transform: translateX(20px); */
+    transition: .75s ease-in-out;
+}
+
+.song-container > .close-song.active{
+    /* transform: translateX(0); */
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* .sticky-board-wrapper::before {
     display: none;
     content: "";
     position:absolute;
@@ -30,7 +94,7 @@
     background-color: #000;
     height: 25px;
     z-index: 5;
-}
+} */
 
 .sticky-board-wrapper {
     width: 100%;
@@ -45,13 +109,14 @@
 }
 
 .tools {
+    border-right: 5px solid #000;
     display: flex;
     position: relative;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 1em;
     z-index: 10;
-    padding: 1em 0;
+    padding: 0 2em 0 0;
 }
 
 .tool-button {
@@ -95,6 +160,7 @@
     pointer-events: none;
     opacity: 0;
     transition: .5s ease-in-out;
+    border: 2px solid rgb(0, 0, 0, 0.1);
 }
 
 .sticky-note::after {
@@ -114,6 +180,24 @@
 }
 
 .stickyboard {
-    border-left: 5px solid #000;
-    width: 100%
+    width: 100%;
+    background-color: #fff8fb;
+    border-radius: 1em;
+    display: grid;
+}
+
+
+.stickyboard > .post-it {
+    font-size: x-small;
+    font-weight: 500;
+    max-width: 12.5em;
+    width: 50%;
+    height: fit-content;
+    max-height: 17.5em;
+    background-color: #d8ebff;
+    padding: 1em;
+    word-break: break-all;
+    transform: scale(1);
+    opacity: 1;
+
 }

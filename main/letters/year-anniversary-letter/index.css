@@ -1,0 +1,152 @@
+@font-face {
+    font-family: tangerine;
+    src: url(../../../Fonts/Tangerine/Tangerine-Regular.ttf);
+}
+
+@font-face {
+    font-family: gideon-roman;
+    src: url(../../../Fonts/Gideon_Roman/GideonRoman-Regular.ttf);
+}
+
+@font-face {
+    font-family: anton;
+    src: url(../../../Fonts/Anton/Anton-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: #fff8fb;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+li {
+    list-style: none;
+}
+
+a, button {
+    color: rgb(150, 150, 150);
+    transition: color 250ms ease-in-out;
+    font-weight: bold;
+}
+
+a {
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+a:hover, button:hover, button:focus {
+    color: #000;
+}
+
+.header-sub-containers {
+    padding: 10px 2em;
+    width: 100%;
+    background-color: #fff8fb;
+}
+
+.header-title-container {
+    height: 100%;
+    margin: 0;
+    border-bottom: #fcdce9 2px solid;
+}
+
+.header-title {
+    font-family: anton, Arial, Helvetica, sans-serif;
+    font-size: 64px;
+    color: #fcdce9;
+    text-shadow: 1px 1px 1px black;
+    margin: 0;
+    padding: 0;
+}
+
+.header-links-container {
+    position: sticky;
+    top: 0;
+    transition: 500ms ease-in-out;
+    border-bottom: #fcdce9 2px solid;
+}
+
+.header-links-container.sticking {
+    background-color: #fcdce9;
+}
+
+.home {
+    transition: 500ms ease-in-out;
+}
+
+.home.sticky_header {
+    border-right: 2px solid #008080;
+    color: #008080;
+}
+
+.home.sticky_header:hover {
+    color: #000;
+}
+
+.header-link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px .5em;
+    margin: 0;
+    width: fit-content;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+
+.header-link:focus {
+    background-color: #fcdce9;
+}
+
+.container {
+    height: 100%;
+    width: 85%;
+    padding: 2.5% 5% 0 5%;
+}
+
+
+.sections {
+    font-family: gideon-roman, 'Times New Roman', Times, serif;
+}
+
+.chapters {
+    font-size: 24px;
+    font-family: tangerine;
+}
+
+.images {
+
+}
+
+.section-1 > .subheader {
+    font-family: tangerine;
+    font-weight: lighter ;
+    font-size: 54px;
+}
+
+.image-1 {
+    height: auto;
+    width: 100%;
+}

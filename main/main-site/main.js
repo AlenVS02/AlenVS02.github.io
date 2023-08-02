@@ -76,29 +76,28 @@ createNoteButton.addEventListener('click', () => {
 // This block of code adds draggable functionality to the post-its
 
 let drag;
-const numberRegEx = /[1-9]|[1-9]|[0-9]|100/;
+const numberRegEx = /[1-9]/;
 
-function dragMove(id) {
-    var element = document.getElementById(`post-it-note${numberRegEx}`);
-    element.style.position = 'absolute';
-    element.onmousedown = function(){
-        drag = element;
-    }
+function dragMove(group) {
+    var elements = document.querySelectorAll('.post-it-note')
+    elements.forEach(element => {
+        element.style.position = 'absolute';
+        element.onmousedown = function(){
+            drag = element;
+        }
+    });
 }
 
 document.onmouseup = function(e) {
     drag = null;
 }
 document.onmousemove = function(e) {
-    console.log(drag.id)
     var x = e.pageX
     var y = e.pageY
-    console.log(type(x), type(y))
+
     drag.style.left = x + 'px';
     drag.style.top = y + 'px'
 }
-
-
 
 // This block of code is for the daily song feature
 const showSongButton = document.querySelector('[data-song-target]')

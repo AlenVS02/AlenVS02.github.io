@@ -8,18 +8,16 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="main2.css">
     <link rel="stylesheet" href="popup.css">
-    <script src="main.js" defer>
-        const numberRegEx = /[1-9]|[1-9]|[0-9]|100/;
-    </script>
+    <script src="main.js" defer></script>
 </head>
-<body onload="dragMove('post-it-note${numberRegEx}')">
+<body onload="dragMove('post-it-note1')">
     <header class="header">
         <h1 class="header-title"> Your Daily Valentine's</h1>
         <div class="dropdown" data-dropdown>
             <button class="header-link" data-dropdown-button> Letters </button>
             <div class="dropdown-menu">
                 <a href="../letters/valentine-letter/index.html" id="valentine-letter" class="menu-link">Valentine's Letter</a>
-                <a href="" class="menu-link"> Letter 2 </a>
+                <a href="../letters/year-anniversary-letter/index.html" class="menu-link"> One Year Anniversary </a>
                 <a href="" class="menu-link"> Letter 3 </a>
                 <a href="" class="menu-link"> All Letters </a>
             </div>
@@ -65,7 +63,7 @@
                         <button data-close-button class="close-popup"> &times; </button>
                     </header>
                     <div class="popup-body">
-                        <input name="post-it" id="post-it" cols="30" rows="10" class="post-it" type="text"></input>
+                        <textarea name="post-it" id="post-it" cols="30" rows="10" class="post-it" type="text"></textarea>
                     </div>
                     <footer class="popup-footer">
                         <button data-close-button class="create-button"> Create </button>

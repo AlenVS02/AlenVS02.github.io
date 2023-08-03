@@ -17,6 +17,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding: var(--scroll-padding, 5rem);
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -79,8 +84,10 @@ a:hover, button:hover, button:focus {
 .header-links-container {
     position: sticky;
     top: 0;
-    transition: 500ms ease-in-out;
+    transition: 250ms ease-in-out;
     border-bottom: #fcdce9 2px solid;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header-links-container.sticking {
@@ -132,8 +139,15 @@ a:hover, button:hover, button:focus {
 }
 
 .chapters {
-    font-size: 24px;
+    font-size: 48px;
     font-family: tangerine;
+    padding: 0;
+    margin: 1em 0 0 0;
+}
+
+.paragraphs {
+    font-size: 18px;
+    width: 65%;
 }
 
 .images {
@@ -141,12 +155,11 @@ a:hover, button:hover, button:focus {
 }
 
 .section-1 > .subheader {
-    font-family: tangerine;
-    font-weight: lighter ;
-    font-size: 54px;
+    font-family: gideon-roman;
+    font-size: 52px;
 }
 
 .image-1 {
     height: auto;
-    width: 100%;
+    width: 75%;
 }

@@ -1,3 +1,4 @@
+// set up intersection observer to create animation for navigation bar when its position reaches top: 0
 const link_header = document.querySelector('.header-links-container');
 const scroll_watcher = document.createElement('div');
 const home_link = document.querySelector('.home')
@@ -12,3 +13,10 @@ const navObserver = new IntersectionObserver((entries) => {
 
 
 navObserver.observe(scroll_watcher)
+
+// create smooth animation for scrolling with links within page
+const navbar_height = link_header.offsetHeight;
+
+document.documentElement.style.setProperty(
+    "--scroll-padding", navbar_height + 'px'
+);

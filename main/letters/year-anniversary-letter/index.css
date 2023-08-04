@@ -88,6 +88,7 @@ a:hover, button:hover, button:focus {
     border-bottom: #fcdce9 2px solid;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header-links-container.sticking {
@@ -140,7 +141,7 @@ a:hover, button:hover, button:focus {
 
 .chapters {
     font-size: 48px;
-    font-family: tangerine;
+    font-family: tangerine, cursive;
     padding: 0;
     margin: 1em 0 0 0;
 }
@@ -151,15 +152,18 @@ a:hover, button:hover, button:focus {
 }
 
 .images {
+    height: auto;
+    width: 75%;
+    padding: 10px;
 
 }
 
 .section-1 > .subheader {
-    font-family: gideon-roman;
+    font-family: gideon-roman, 'Times New Roman', Times, serif;
     font-size: 52px;
 }
 
-.image-1 {
-    height: auto;
-    width: 75%;
+.to-be-continued {
+    font-family: tangerine, cursive;
+    font-size: 48px;
 }

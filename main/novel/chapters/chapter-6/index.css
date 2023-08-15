@@ -1,16 +1,16 @@
 @font-face {
     font-family: tangerine;
-    src: url(../../../Fonts/Tangerine/Tangerine-Regular.ttf);
+    src: url(../../../../Fonts/Tangerine/Tangerine-Regular.ttf);
 }
 
 @font-face {
     font-family: gideon-roman;
-    src: url(../../../Fonts/Gideon_Roman/GideonRoman-Regular.ttf);
+    src: url(../../../../Fonts/Gideon_Roman/GideonRoman-Regular.ttf);
 }
 
 @font-face {
     font-family: anton;
-    src: url(../../../Fonts/Anton/Anton-Regular.ttf);
+    src: url(../../../../Fonts/Anton/Anton-Regular.ttf);
 }
 
 * {

@@ -1,0 +1,116 @@
+@font-face {
+    font-family: tangerine;
+    src: url(../../../Fonts/Tangerine/Tangerine-Regular.ttf);
+}
+
+@font-face {
+    font-family: gideon-roman;
+    src: url(../../../Fonts/Gideon_Roman/GideonRoman-Regular.ttf);
+}
+
+@font-face {
+    font-family: anton;
+    src: url(../../../Fonts/Anton/Anton-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 2px solid black; */
+}
+
+body {
+    height: 100%;
+    background-color: #fff8fb;
+}
+
+a {
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    color: inherit;
+}
+
+.chapter > a {
+    color: rgb(150, 150, 150);
+    transition: all 0.250s ease-in-out;
+}
+
+.chapter > a:hover {
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+.header-title-container {
+    display: flex;
+    justify-content: center;
+    border-bottom: #fcdce9 2px solid;
+}
+
+.header-title {
+    font-family: anton, Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    color: #fcdce9;
+    text-shadow: 1px 1px 1px black;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.table-of-contents {
+    --tableWidth: 60%;
+    --tableHeight: 40%;
+
+    width: var(--tableWidth);
+    height: var(--tableHeight);
+    border: #fcdce9 5px solid;
+    border-radius: 1em;
+
+    position: absolute;
+    left: calc(50% - (var(--tableWidth) / 2));
+    top: calc(50% - (var(--tableHeight) / 2 ));
+    padding: .5em 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-of-contents .header {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 55px;
+}
+
+.table-of-contents .chapter-container {
+    height: 100%;
+}
+
+.table-of-contents .nav-footer {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.nav-arrow {
+    background: none;
+    border: none;
+    fill: none;
+    cursor: pointer;
+    width: 4%;
+    height: auto;
+    transition: all 0.25s ease-in-out;
+}
+
+.nav-arrow:hover {
+    scale: 1.05;
+}
